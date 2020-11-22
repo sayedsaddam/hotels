@@ -12,4 +12,16 @@ class Home extends CI_Controller{
         $data['body'] = 'home';
         $this->load->view('components/template', $data);
     }
+    // About us.
+    public function about(){
+        echo 'About Hotels';
+    }
+    // Hotels
+    public function hotels(){
+        echo 'Hotels';
+    }
+    // Locations
+    public function locations(){
+        echo 'Locations';
+    }
 }
