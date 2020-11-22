@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row text-white">
             <div class="col-xl-lg-3 col-md-3 col-sm-12">
-                <h4><a class="text-white" href="<?= base_url(); ?>">Hotels</a></h4><br>
+                <h4><a class="text-white" href="<?= base_url(); ?>">HotelFinder</a></h4><br>
                 <p>Hotels is a site developed for putting all hotels' data on a webiste to tourists who visit Swat.</p>
             </div>
             <div class="col-xl-lg-3 col-md-3 col-sm-12">
