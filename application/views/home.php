@@ -41,20 +41,25 @@
 <hr>
 <div class="container">
     <div class="row">
+        <?php if(!empty($posts)): foreach($posts as $post): ?>
         <div class="col-xl-lg-4 col-md-4 col-sm-6">
             <div class="card border-success mb-3">
                 <div class="card-header bg-transparent border-success">
-                    <h5>Trending</h5>
+                    <h5><?= $post->post_title; ?></h5>
                 </div>
                 <div class="card-body text-success">
-                    <h5 class="card-title">Trending Hotels</h5>
-                    <p class="card-text">Some of the top hotels trending this month are listed below.</p>
+                    <h5 class="card-title"><?= $post->post_title; ?></h5>
+                    <p class="card-text"><?= substr($post->post_content, 0, 191); ?></p>
+                    <footer class="blockquote-footer">
+                        <small><?= date('M jS, Y', strtotime($post->post_date)); ?></small>
+                    </footer>
                 </div>
                 <div class="card-footer bg-transparent border-success text-right">
                     <a href="#" class="btn btn-success btn-sm">read more &raquo;</a>
                 </div>
             </div>
         </div>
+        <?php endforeach; endif; ?>
         <div class="col-xl-lg-4 col-md-4 col-sm-6">
             <div class="card border-info mb-3">
                 <div class="card-header bg-transparent border-info">

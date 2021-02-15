@@ -11,12 +11,13 @@ class Home extends CI_Controller{
     public function index(){
         $data['title'] = 'Home | Hotels';
         $data['body'] = 'home';
+        $data['posts'] = $this->home_model->get_data();
         $this->load->view('components/template', $data);
     }
     // About us.
     public function about(){
         $data = $this->home_model->get_data();
-        echo "<pre>"; var_dump($data);
+        echo "<pre>"; print_r($data);
     }
     // Hotels
     public function hotels(){
